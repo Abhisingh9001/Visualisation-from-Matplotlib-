@@ -1,0 +1,57 @@
+#LINE PLOT
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+plt.figure(figsize= (12,6))
+x = [2,3,4,5,6,7,8]
+y = [6,7,8,9,4,6,2]
+plt.plot(x,y)
+plt.plot(x,y, label = 'line plot')
+plt.xlabel('X label')
+plt.ylabel('Y label')
+plt.legend()
+plt.show()
+
+#BAR CHART
+
+X = ['DSA','ML','AL','HTML','CSS']
+Y = [75,80,85,90,95]
+plt.bar(X,Y,)
+plt.figure(figsize= (12,6))
+plt.show()
+plt.grid()
+plt.bar(X,Y, label = 'Bar plot' , color = 'r')
+plt.xlabel("Courses")
+plt.ylabel("No. of students")
+plt.show()
+
+#HISTOGRAM
+
+data1 = np.random.normal(0,1,1000)
+data2 = np.random.normal(4,1,1000)
+plt.figure(figsize = (12,6))
+
+plt.hist([data1 , data2] , label =[ 'Distribution 1', 'Distribution 2'] , color = ['r','b'] , edgecolor = 'g' ,linewidth = 3, bins = 20  )
+plt.xlabel('Value')
+plt.ylabel('Frequency')
+plt.grid() # grid se graph ke background mei linig aa jata hai
+plt.legend()
+plt.title('histogram')
+
+#SCATTER PLOT
+x = [1,2,3,4,6,7,8,9]
+y = [12,13,14,15,16,17,18,19]
+plt.scatter(x,y, color= 'r' , marker = '*' , label = 'Data points' , linewidth = 10) # linewidth se star ka size badh jata hai
+plt.title('scatter plot')
+plt.xlabel('x value')
+plt.ylabel('y value')
+plt.grid()
+plt.legend()
+plt.show()
+
+#PIECHART
+class_name = ['AI','ML','OPPS','DSA','R']
+class_size = [56,76,87,25,89]
+plt.pie(class_size ,  labels = class_name, autopct = '%0.2f')
+plt.show()
